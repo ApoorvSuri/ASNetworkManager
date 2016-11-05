@@ -18,7 +18,7 @@ class NetworkManager {
     internal typealias WebServiceSuccess = (_ json : JSON) -> Void
     internal typealias WebServiceFailure = (_ error : Error?) -> Void
     
-    private class func performNetworkRequest(URLString : String
+    class func performNetworkRequest(URLString : String
         , method : String
         , parameters : [String : Any]
         , successBlock : @escaping WebServiceSuccess

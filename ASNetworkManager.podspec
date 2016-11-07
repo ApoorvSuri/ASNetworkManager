@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ASNetworkManager'
-  s.version          = '0.0.4'
+  s.version          = '0.0.5'
   s.summary          = 'An Easy way to Call REST APIs'
   s.dependency 'SwiftyJSON'
 

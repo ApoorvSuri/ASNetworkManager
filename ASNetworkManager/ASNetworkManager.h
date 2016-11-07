@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NetworkManager.swift"
 
 //! Project version number for ASNetworkManager.
 FOUNDATION_EXPORT double ASNetworkManagerVersionNumber;

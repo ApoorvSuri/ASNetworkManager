@@ -11,7 +11,6 @@
 		BE4BC66E0E06D5BC4819B095 /* Pods_ASNetworkManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BEDC7AEFE5B2FF8AFD0C629 /* Pods_ASNetworkManagerTests.framework */; };
 		D19E95441DC73BBF009CDCE0 /* ASNetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D19E953A1DC73BBF009CDCE0 /* ASNetworkManager.framework */; };
 		D19E95491DC73BBF009CDCE0 /* ASNetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19E95481DC73BBF009CDCE0 /* ASNetworkManagerTests.swift */; };
-		D19E954B1DC73BBF009CDCE0 /* ASNetworkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D19E953D1DC73BBF009CDCE0 /* ASNetworkManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D19E95551DC74495009CDCE0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19E95541DC74495009CDCE0 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +31,6 @@
 		56F42ABD577441D0D6D051E0 /* Pods_ASNetworkManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASNetworkManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BEDC7AEFE5B2FF8AFD0C629 /* Pods_ASNetworkManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASNetworkManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19E953A1DC73BBF009CDCE0 /* ASNetworkManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ASNetworkManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D19E953D1DC73BBF009CDCE0 /* ASNetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASNetworkManager.h; sourceTree = "<group>"; };
 		D19E953E1DC73BBF009CDCE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D19E95431DC73BBF009CDCE0 /* ASNetworkManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ASNetworkManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19E95481DC73BBF009CDCE0 /* ASNetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASNetworkManagerTests.swift; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 		D19E953C1DC73BBF009CDCE0 /* ASNetworkManager */ = {
 			isa = PBXGroup;
 			children = (
-				D19E953D1DC73BBF009CDCE0 /* ASNetworkManager.h */,
 				D19E95541DC74495009CDCE0 /* NetworkManager.swift */,
 				D19E953E1DC73BBF009CDCE0 /* Info.plist */,
 			);
@@ -128,7 +125,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D19E954B1DC73BBF009CDCE0 /* ASNetworkManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

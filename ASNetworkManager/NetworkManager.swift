@@ -42,28 +42,28 @@ class NetworkManager {
             
             let json = try JSONSerialization.data(withJSONObject: parameters, options: [])
             urlRequest.httpBody = json
-
+            
         } catch let error {
-
-        print("#Warning : ASNetworkManager - Error Attaching Parameters \(error.localizedDescription)")
+            
+            print("#Warning : ASNetworkManager - Error Attaching Parameters \(error.localizedDescription)")
             
         }
         
         
         let dataTask = session.dataTask(with: urlRequest
             , completionHandler:{
-            
-            data,response,error in
-            
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
-
+                
+                data,response,error in
+                
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                
                 if error != nil {
                     
-                   OperationQueue.main.addOperation({ 
-                    
-                    failureBlock(error!)
-                    
-                   })
+                    OperationQueue.main.addOperation({
+                        
+                        failureBlock(error!)
+                        
+                    })
                 } else {
                     
                     let statusCode = (response as! HTTPURLResponse).statusCode
@@ -73,12 +73,23 @@ class NetworkManager {
                         print("#Warning : ASNetworkManager - Invalid Status Code \(statusCode)")
                         
                         failureBlock(error!)
-
+                        
                     } else {
                         
                         OperationQueue.main.addOperation({
                             
-                           successBlock(JSON(response!))
+                            do {
+                                
+                                let parsedData = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableLeaves)
+                                
+                                successBlock(JSON(parsedData))
+                                
+                            } catch let error {
+                                
+                                print("#Warning : ASNetworkManager - Error Reading Data : \(error.localizedDescription)")
+                                
+                            }
+                            
                         })
                     }
                 }

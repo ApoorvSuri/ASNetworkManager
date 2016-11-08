@@ -87,9 +87,7 @@ class NetworkManager {
                             } catch let error {
                                 
                                 print("#Warning : ASNetworkManager - Error Reading Data : \(error.localizedDescription)")
-                                
                             }
-                            
                         })
                     }
                 }

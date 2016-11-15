@@ -21,6 +21,7 @@ class NetworkManager {
     class func performNetworkRequest(URLString : String
         , method : String
         , parameters : [String : Any]
+        , headers : Dictionary < String, Any >
         , successBlock : @escaping WebServiceSuccess
         , failureBlock : @escaping WebServiceFailure)  {
         
@@ -31,6 +32,14 @@ class NetworkManager {
         var urlRequest = URLRequest.init(url: url!, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10)
         
         urlRequest.httpMethod = method
+        
+        if headers.keys.count > 0 {
+            
+            for key in headers.keys {
+                
+                urlRequest.setValue(headers[key] as! String?, forHTTPHeaderField: key)
+            }
+        }
         
         let configuration  = URLSessionConfiguration.default
         
